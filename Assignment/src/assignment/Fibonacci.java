@@ -5,19 +5,23 @@ import java.util.Scanner;
 public class Fibonacci {
     
     public static void main(String[] args){
+       
+        
         Scanner input = new Scanner(System.in);
-        System.out.print("Numbers:");
+        System.out.print("Enter the term:");
         int n = input.nextInt();
-        int first = 0;
-        int second = 1;
-        int fibo;
-        System.out.print(first+" "+second);
-        for(int i=3;i<=n;i++){
-            fibo= first+second;
-        System.out.print(" "+fibo);
-        first=second;
-        second=fibo;
+      System.out.println("The fibonacci series is:");
+       
+        for(int i=0;i<=n;i++){
+          
+       System.out.print(fibo(i)+" ");
+        
     }
-    System.out.println();
+    }
+   public static int fibo(int val){
+       if(val==0) return 0;
+       else if(val==1) return 1;
+       else
+           return(fibo(val-1)+fibo(val-2));
 }
 }
